@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1491010016 source:c:\users\12jpi\appdata\local\temp\htmlform.cpp
+	<iostream>
+	"htmlform.h"
+
+1491010118 c:\users\12jpi\appdata\local\temp\htmlform.h
+	<vector>
+	<string>
+	"namevaluepair.h"
+
+1491010129 c:\users\12jpi\appdata\local\temp\namevaluepair.h
+	<string>
+
+1491010121 source:c:\users\12jpi\appdata\local\temp\main.cpp
+	<iostream>
+	"htmlform.h"
+
+1491010126 source:c:\users\12jpi\appdata\local\temp\namevaluepair.cpp
+	"namevaluepair.h"
+
+1446671344 source:c:\users\12jpi\google drive\programdump\csc_125\samplefiles\main.cpp
+	<iostream>
+

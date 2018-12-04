@@ -1,0 +1,43 @@
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+#include <string>
+
+
+using namespace std;
+
+int main()
+{
+    string menuOptionBuffer;
+    int menuOption(0);
+    ///menu readout and selection
+    cout<<"What would you like to do?"<<endl<< "1. Display the list."<<endl<<"2. Add a name to the list,"<<endl<<"3. Show all the list."<<endl<<"4. Exit."<<endl;
+    cout<<endl<<"Enter the number and press return."<<endl;
+    getline(cin,menuOptionBuffer);
+    menuOption= atoi(menuOptionBuffer.c_str());
+   ///beginning of the menu switch
+    switch (menuOption)
+    {
+        case 1:
+            cout<<"List so far:"<<endl;
+            break;
+        default:
+            cout<<"are you sure?"<<endl;
+            break;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    return 0;
+}

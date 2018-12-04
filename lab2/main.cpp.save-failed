@@ -1,0 +1,25 @@
+#include <iostream>
+#include <"htmlTable.h">
+
+using namespace std;
+
+int main()
+{
+    cout << "Content-type: text/html" << endl << endl;
+
+
+
+HtmlTable table;
+
+
+
+
+
+
+
+
+
+
+    cout << "Hello world!" << endl;
+    return 0;
+}

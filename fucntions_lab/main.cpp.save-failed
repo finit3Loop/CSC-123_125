@@ -1,0 +1,220 @@
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+#include <string>
+
+using namespace std;
+int numBody(0),numHead(0),numAntenna(0), numWing(0),numStinger(0),numLeg(0),numEye(0),rollCount(0);
+
+///takes roll and decides if the part is added
+void boddy_parts(int roll);
+///returns string output for added body part
+string part_added(string part);
+///checks for the complete body for the Cootie
+bool full_body();
+///rolling
+int random_roll();
+
+int main()
+{
+srand(time(0));
+int roll(0);
+
+   while (full_body())
+   {
+    boddy_parts(random_roll());
+    rollCount++;
+   }
+   cout<<"Your game took "+rollCount+" rolls."<<endl;
+   /// cout << roll << endl;
+   return 0;
+}
+
+
+
+
+void boddy_parts(int roll)
+{
+string part;
+    switch (roll)
+{
+    case 1:
+        if (numBody==0)
+        {
+            numBody++;
+            part="body";
+            cout<<part_added(part)<<endl;
+        }
+        else
+            cout<<"You already have a body! :("<<endl;
+        break;
+
+    case 2:
+        if(numBody==1&&numHead==0)
+        {
+            numHead++;
+            part="head";
+            part="body";
+            cout<<part_added(part)<<endl;
+        }
+        else if (numBody==0)
+        {
+            cout<<"You cant add the head without the body!"<<endl;
+
+        }
+        else if (numHead>0)
+        {
+            cout<<"You already have a head!"<<endl;
+        }
+        break;
+    case 3:
+        if (numHead==1&&numAntenna<2)
+        {
+            numAntenna++;
+            part="antenna";
+            part="body";
+            cout<<part_added(part)<<endl;
+        }
+        else if (numHead==0)
+        {
+            cout<<"You don't have a head to attach those antenna to! :("<<endl;
+        }
+
+        else if (numAntenna==2)
+        {
+            cout<<"You already have 2 antenna! :("<<endl;
+        }
+        break;
+    case 4:
+        if (numBody==1&&numWing<2)
+        {
+            numWing++;
+            part="wing";
+            part="body";
+            cout<<part_added(part)<<endl;
+        }
+        else if (numHead==0)
+        {
+            cout<<"You don't have a body to attach those wings to! :("<<endl;
+
+        }
+        else if (numWing==2)
+        {
+            cout<<"You already have 2 wings! :("<<endl;
+        }
+
+        break;
+    case 5:
+        if (numBody==1&&numStinger<1)
+        {
+            numStinger++;
+            part="stinger";
+            part="body";
+            cout<<part_added(part)<<endl;
+        }
+        else if (numBody<1)
+        {
+             cout<<"You don't have a body to put that stinger on! :("<<endl;
+        }
+        else if (numStinger>=1)
+        {
+            cout<<"You already have 1 stinger! :("<<endl;
+        }
+        break;
+
+    case 6:
+        if (numBody==1&&numLeg<4)
+        {
+            numLeg++;
+            part="leg";
+            part="body";
+            cout<<part_added(part)<<endl;
+        }
+        else if (numBody<1)
+        {
+            cout<<"You don't have a body to put that leg on! :( "<<endl;
+        }
+        else if (numLeg>=4)
+        {
+            cout<<"You already have 4 legs! :("<<endl;
+        }
+        break;
+    case 7:
+        if (numHead==1&&numEye<6)
+        {
+            numEye++;
+            part="Eye";
+            part="body";
+            cout<<part_added(part)<<endl;
+        }
+        else if (numHead<1)
+        {
+            cout<<"You don't have head to put that eye on! :("<<endl;
+        }
+        else if (numEye>=6)
+        {
+            cout<<"You already have 6 eyes! :("<<endl;
+        }
+        break;
+    default:
+        cout<<"That's an odd roll!"<<endl;
+    }
+}
+
+string part_added(string part)
+{
+    string statement;
+    statement="Yeah, you can add that "+part+"!";
+    return(statement);
+}
+
+bool full_body()
+{
+    return(numBody<1||numHead<1||numAntenna<2||numWing<2||numStinger<1||numLeg<4||numEye<6);
+}
+
+int random_roll()
+{
+    rollCount++;
+    return((rand()%7)+1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

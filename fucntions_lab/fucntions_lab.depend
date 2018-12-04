@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1480107220 source:c:\users\12jpi\google drive\123_programs\fucntions_lab\main.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+	<string>
+

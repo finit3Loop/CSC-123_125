@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1481914377 source:c:\users\12jpi\google drive\123_programs\arraylab\main.cpp
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<string>
+
